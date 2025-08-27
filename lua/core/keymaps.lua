@@ -26,5 +26,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>") -- 设置nh = no highlight,搜索后�
 -- -------------插件----------------
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- 把左侧栏文件插件nvimtree,打开键改为 e
 -- 切换buffer,就是上边打开的那个
-keymap.set("n", "<C-L>", ":bnext<CR>") -- ctrl+shift+l右边
-keymap.set("n", "<C-H>", ":bprevious<CR>") -- ctrl+shiit+h左边
+-- keymap.set("n", "<C-L>", ":bnext<CR>") -- ctrl+shift+l右边
+-- keymap.set("n", "<C-H>", ":bprevious<CR>") -- ctrl+shiit+h左边
+keymap.set("n", "<leader>hh", ":bnext<CR>") -- ctrl+shift+l右边
+keymap.set("n", "<leader>ll", ":bprevious<CR>") -- ctrl+shiit+h左边
