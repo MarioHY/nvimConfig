@@ -41,7 +41,6 @@ return require('packer').startup(function(use)
     },
   }
   use("christoomey/vim-tmux-navigator") -- 左侧文档树和文档编辑之间切换的插件,ctrl +hjkl
-  use "akinsho/bufferline.nvim" -- 上面打开文件的buffer分割线
   use("nvim-treesitter/nvim-treesitter") -- 语法高亮
   -- use "p00f/nvim-ts-rainbow" -- 这个是不同括号颜色区分，有冲突就不弄了
 
@@ -61,15 +60,23 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim" -- gcc和gc的注释
   use "windwp/nvim-autopairs" -- 自动补全括号
 
+  use "akinsho/bufferline.nvim" -- buffer分割线
   use "lewis6991/gitsigns.nvim" -- 左则git提示
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-
   
+  -- 使用预览markdown工具
+  -- install without yarn or npm
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

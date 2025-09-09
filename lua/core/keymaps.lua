@@ -28,5 +28,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- 把左侧栏文件插件n
 -- 切换buffer,就是上边打开的那个
 -- keymap.set("n", "<C-L>", ":bnext<CR>") -- ctrl+shift+l右边
 -- keymap.set("n", "<C-H>", ":bprevious<CR>") -- ctrl+shiit+h左边
-keymap.set("n", "<leader>hh", ":bnext<CR>") -- ctrl+shift+l右边
-keymap.set("n", "<leader>ll", ":bprevious<CR>") -- ctrl+shiit+h左边
+
+keymap.set("n", "<leader>ll", ":bnext<CR>") -- 空格+ll
+keymap.set("n", "<leader>hh", ":bprevious<CR>") -- 空格+hh
